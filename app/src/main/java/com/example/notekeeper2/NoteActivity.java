@@ -34,7 +34,6 @@ public class NoteActivity extends AppCompatActivity {
     NoteActivityViewModel mViewModel;
     private boolean mIsCancelling;
     private Boolean mIsNewNote ;
-    private DataManager sDataManager = getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +82,7 @@ public class NoteActivity extends AppCompatActivity {
         if (mIsNewNote) {
             createNewNote();
         }
-        mNote = getInstance().getNotes().get(mNotePosition);
+        mNote = DataManager.getInstance().getNotes().get(mNotePosition);
 
     }
 
@@ -92,7 +91,7 @@ public class NoteActivity extends AppCompatActivity {
         super.onPause();
         if (mIsCancelling) {
             if (mIsNewNote) {
-                sDataManager.removeNote(mNotePosition);
+                DataManager.getInstance().removeNote(mNotePosition);
             } else
                 restoreOriginalValues();
 
@@ -134,7 +133,7 @@ public class NoteActivity extends AppCompatActivity {
             }
 
     private void displayNote(Spinner mSpinnerCourses, EditText textNoteTitle, EditText textNoteText) {
-        mNote = getInstance().getNotes().get(mNotePosition);
+        mNote = DataManager.getInstance().getNotes().get(mNotePosition);
         int courseIndex = mCourses.indexOf(mNote.getCourse());
         mSpinnerCourses.setSelection(courseIndex);
         textNoteTitle.setText(mNote.getTitle());

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
     private  final Context mContext;
     private final LayoutInflater mLayoutInflater;
     private List<CourseInfo> mCourses;
-    private int mCurrentPosition;
+//    private int mCurrentPosition;
 
 
     public CourseRecyclerAdapter(Context context, List<CourseInfo> courses) {
@@ -40,7 +41,7 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 
         CourseInfo course = mCourses.get(position);
         holder.mTextCourse.setText(course.getTitle());
-        mCurrentPosition = position;
+//        mCurrentPosition = position;
     }
 
     @Override
@@ -48,7 +49,7 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
         return mCourses.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public final TextView mTextCourse;
 
@@ -56,17 +57,23 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
             super(itemView);
             mTextCourse = itemView.findViewById(R.id.text_course);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, mCourses.get(mCurrentPosition).getTitle(),
-                            Snackbar.LENGTH_LONG).show();
+            itemView.setOnClickListener(this);
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Snackbar.make(view, mCourses.get(mCurrentPosition).getTitle(),
+//                            Snackbar.LENGTH_LONG).show();
+//
+//                }
+//            });
 
-                }
-            });
 
 
+        }
 
+        @Override
+        public void onClick(View view) {
+            Snackbar.make(view,"Position\t"+ getAdapterPosition(), Snackbar.LENGTH_LONG).show();
         }
     }
 }

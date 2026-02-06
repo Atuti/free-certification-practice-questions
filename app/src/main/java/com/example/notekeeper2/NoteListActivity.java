@@ -18,7 +18,7 @@ import android.view.View;
 
 import java.util.List;
 
-//import static com.example.notekeeper2.NoteActivity.NOTE_POSITION;
+//import static com.example.noteKeeper2.NoteActivity.NOTE_POSITION;
 
 public class NoteListActivity extends AppCompatActivity {
 
@@ -51,10 +51,10 @@ public class NoteListActivity extends AppCompatActivity {
         mNotesRecyclerView = findViewById(R.id.recycler_note);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mNotesRecyclerView.setLayoutManager(layoutManager);
-
         mNotesNoteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
-
         mNotesRecyclerView.setAdapter(mNotesNoteRecyclerAdapter);
+
+
     }
 
     @Override
@@ -62,4 +62,5 @@ public class NoteListActivity extends AppCompatActivity {
         super.onResume();
         mNotesNoteRecyclerAdapter.notifyDataSetChanged();
     }
+
 }

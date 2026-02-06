@@ -2,10 +2,12 @@ package com.example.notekeeper2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,7 +49,9 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
         return mNotes.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder
+            implements View.OnClickListener
+    {
 
         public final TextView mTextCourse;
         public final TextView mTextTitle;
@@ -57,18 +61,25 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
             mTextCourse = itemView.findViewById(R.id.text_course);
             mTextTitle = itemView.findViewById(R.id.text_title);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(mContext, NoteActivity.class);
-                    intent.putExtra(NoteActivity.NOTE_POSITION, mCurrentPosition);
-                    mContext.startActivity(intent);
+            itemView.setOnClickListener(this);
 
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent(mContext, NoteActivity.class);
+//                    intent.putExtra(NoteActivity.NOTE_POSITION, mCurrentPosition);
+//                    mContext.startActivity(intent);
+//
+//                }
+//            });
+        }
 
 
-
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(mContext, NoteActivity.class);
+            intent.putExtra(NoteActivity.NOTE_POSITION, getAdapterPosition());
+            mContext.startActivity(intent);
         }
     }
 }

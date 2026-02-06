@@ -18,6 +18,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,10 +28,13 @@ public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private NoteRecyclerAdapter mNotesRecyclerNoteRecyclerAdapter;
+    private NoteRecyclerAdapter mNoteRecyclerAdapter;
+    private CourseRecyclerAdapter mCourseRecyclerAdapter;
     private RecyclerView mRecyclerItems;
     private ActionBarDrawerToggle mToggle;
     private LinearLayoutManager mLayoutManager;
+    private RecyclerView mListItems;
+    private GridLayoutManager mGridLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,25 +104,33 @@ public class MainActivity extends AppCompatActivity implements
     private void initializeDisplayValues() {
         mRecyclerItems = findViewById(R.id.list_items);
         mLayoutManager = new LinearLayoutManager(this);
+        mListItems = findViewById(R.id.list_items);
+        mGridLayoutManager = new GridLayoutManager(this, 2);
 
 
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
-        mNotesRecyclerNoteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
+        List<CourseInfo> courses = DataManager.getInstance().getCourses();
+        mNoteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
+        mCourseRecyclerAdapter = new CourseRecyclerAdapter(this, courses);
         displayNotes();
     }
 
     private void displayNotes() {
         mRecyclerItems.setLayoutManager(mLayoutManager);
-        mRecyclerItems.setAdapter(mNotesRecyclerNoteRecyclerAdapter);
+        mRecyclerItems.setAdapter(mNoteRecyclerAdapter);
+        selectNavigationMenuItem(R.id.nav_notes2);
+    }
+
+    private void selectNavigationMenuItem(int id) {
         NavigationView navigationView = findViewById(R.id.nav_view);
         Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_notes2).setChecked(true);
+        menu.findItem(id).setChecked(true);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mNotesRecyclerNoteRecyclerAdapter.notifyDataSetChanged();
+        mNoteRecyclerAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -128,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements
         if (id == R.id.nav_notes2) {
             displayNotes();
         } else if (id == R.id.nav_courses2) {
-            handleSelection("courses");
+            displayCourses();
         } else if (id == R.id.nav_gallery) {
             handleSelection("gallery here");
         }
@@ -138,6 +150,13 @@ public class MainActivity extends AppCompatActivity implements
         drawer.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    private void displayCourses() {
+        mRecyclerItems.setLayoutManager(mGridLayoutManager);
+        mRecyclerItems.setAdapter(mCourseRecyclerAdapter);
+
+        selectNavigationMenuItem(R.id.nav_courses2);
     }
 
     private void handleSelection(String message) {
